@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 
 @Component({
-  selector: 'app-san-jose',
-  templateUrl: './san-jose.component.html',
-  styleUrls: ['./san-jose.component.css']
+  selector: 'app-seattle',
+  templateUrl: './seattle.component.html',
+  styleUrls: ['./seattle.component.css']
 })
-
-export class SanJoseComponent implements OnInit {
+export class SeattleComponent implements OnInit {
     humidity: String;
     avgTemp: String;
     highTemp: String;
@@ -18,11 +17,11 @@ export class SanJoseComponent implements OnInit {
     constructor(private _httpService: HttpService) { }
 
     ngOnInit() {
-        this.getSanJoseWeather();
+        this.getSeattleWeather();
     }
 
-    getSanJoseWeather() {
-        let observable = this._httpService.getWeather("94088");
+    getSeattleWeather() {
+        let observable = this._httpService.getWeather("98101");
         observable.subscribe(data => {
             this.humidity = data.main.humidity;
             this.avgTemp = this.kelvinToF(data.main.temp);

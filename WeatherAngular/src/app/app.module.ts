@@ -8,11 +8,13 @@ import { SanJoseComponent } from './san-jose/san-jose.component';
 
 import { HttpService } from './http.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SeattleComponent } from './seattle/seattle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SanJoseComponent
+    SanJoseComponent,
+    SeattleComponent
   ],
   imports: [
     BrowserModule,
